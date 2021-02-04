@@ -23,5 +23,5 @@ simply type `veracode-cli --help` in your shell and follow the available options
 
     
           
- </br>         
+
 Please post request as an issue in the code repository
