@@ -35,7 +35,7 @@ exports.handler =  async (argv:any) => {
     const deletingConfirmationResponse = await prompts({
         type: 'confirm',
         name: 'proceed',
-        message: 'Are you OK with proceeding with the workspace deletion:',
+        message: 'Proceed with the workspace deletion?',
         
     });
     if (deletingConfirmationResponse.proceed) {

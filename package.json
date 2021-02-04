@@ -14,7 +14,10 @@
     "veracode-cli": "out/veracode-cli.js"
   },
   "scripts": {
-    "test-workspaces": "node ./out/test/testAPI.js"
+    "test-workspaces": "node ./out/test/testAPI.js",
+    "clean": "del-cli ./out/*",
+    "build": "npm run clean && tsc",
+    "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
   },
   "keywords": [
     "cli",
@@ -34,7 +37,8 @@
   "devDependencies": {
     "@types/node": "^14.14.22",
     "@types/prompts": "^2.0.9",
-    "@types/yargs": "^16.0.0"
+    "@types/yargs": "^16.0.0",
+    "del-cli": "^3.0.1"
   },
   "bugs": {
     "url": "https://github.com/Lerer/veracode-cli/issues"
