@@ -50,7 +50,6 @@ exports.handler = async function (argv:any) {
   fs.writeFileSync(argv.filename,JSON.stringify(overallResults,null,4),{encoding:'utf-8'});
 
   if (argv.verbose) {
-    console.log('verbose');
     overallResults.map((ws:outputWS) => {
       console.log('Workspace: [%s], site: [%s] has [%d] projects',ws.name,ws.id,ws.projects_count);
     })
