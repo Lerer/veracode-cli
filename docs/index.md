@@ -21,5 +21,7 @@ Please follow the instruction in the readme file
 ## Usage
 simply type `veracode-cli --help` in your shell and follow the available options.
 
-
-:information_source: Please post request as an issue in the code repository
+    
+          
+ </br>         
+Please post request as an issue in the code repository
