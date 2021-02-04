@@ -1,17 +1,17 @@
 {
-  "name": "veracode-cli",
+  "name": "@ylveracode/veracode-cli",
   "version": "0.1.0",
   "description": "a NodeJS based API wrapper for utilizing the Veracode APIs",
-  "homepage": "",
+  "homepage": "https://lerer.github.io/veracode-cli/",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/Lerer/veracode-cli.git"
   },
   "engines": {
     "node": ">=14"
   },
   "bin": {
-    "veracode-cli": "./out/veracode-cli.js"
+    "veracode-cli": "out/veracode-cli.js"
   },
   "scripts": {
     "test-workspaces": "node ./out/test/testAPI.js"
@@ -35,5 +35,12 @@
     "@types/node": "^14.14.22",
     "@types/prompts": "^2.0.9",
     "@types/yargs": "^16.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Lerer/veracode-cli/issues"
+  },
+  "main": "./out/veracode-cli.js",
+  "directories": {
+    "doc": "docs"
   }
 }
