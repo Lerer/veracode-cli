@@ -1,7 +1,7 @@
 import fs from 'fs';
 import {outputWS} from '../sca';
 
-exports.command = 'identify_redundant_workspaces [inputfile] [outputfile]'
+exports.command = 'identifyRedundantWorkspaces [inputfile] [outputfile]'
 exports.desc = 'create a list of workspaces which can be deleted - with zero project, and at least one more workspace with the same name';
 exports.builder = (yargs:any) => {
     return yargs

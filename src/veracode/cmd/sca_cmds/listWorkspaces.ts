@@ -3,7 +3,7 @@ import {getWorkspaces} from '../../apis/workspaces';
 import fs from 'fs';
 import {outputWS} from '../sca';
 
-exports.command = 'list_workspaces [options]'
+exports.command = 'listWorkspaces [options]'
 exports.desc = 'create a file with JSON content with Workspaces with their name, ID and, GUID'
 exports.builder =  (yargs:any) => {
   return yargs

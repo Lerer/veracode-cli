@@ -10,6 +10,7 @@ const PROTOCOL = 'https://';
 const DEFAULT_METHOD = 'GET';
 type METHOD = 'GET'|'POST'|'DELETE';
 export const DEFAULT_API_HOST = 'api.veracode.com';
+export const guidRegEx:RegExp = /[a-z\d]{8}-[a-z\d]{4}-[a-z\d]{4}-[a-z\d]{4}-[a-z\d]{12}/i;
 
 export async function request(inputMethod:METHOD,host:string,path:string, params:object) {
     //console.log('api query handler');
