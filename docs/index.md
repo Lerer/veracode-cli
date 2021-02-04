@@ -15,6 +15,6 @@ Please follow the instruction in the readme file
 
 ## Installation
 
-1) Have Node and NPM install
-2) Execute `npm install -g veracode-cli`
+1. Have Node and NPM install
+2. Execute `npm install -g veracode-cli`
 
