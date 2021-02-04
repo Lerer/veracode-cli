@@ -1,6 +1,6 @@
 {
   "name": "@ylveracode/veracode-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a NodeJS based API wrapper for utilizing the Veracode APIs",
   "homepage": "https://lerer.github.io/veracode-cli/",
   "repository": {
