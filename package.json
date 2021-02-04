@@ -1,0 +1,39 @@
+{
+  "name": "veracode-cli",
+  "version": "0.1.0",
+  "description": "a NodeJS based API wrapper for utilizing the Veracode APIs",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "bin": {
+    "veracode-cli": "./out/veracode-cli.js"
+  },
+  "scripts": {
+    "test-workspaces": "node ./out/test/testAPI.js"
+  },
+  "keywords": [
+    "cli",
+    "veracode",
+    "SCA",
+    "SAST"
+  ],
+  "preferGlobal": true,
+  "author": "Yaakov Lerer",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "configparser": "^0.3.8",
+    "prompts": "^2.4.0",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.22",
+    "@types/prompts": "^2.0.9",
+    "@types/yargs": "^16.0.0"
+  }
+}
