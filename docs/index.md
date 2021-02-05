@@ -10,6 +10,19 @@ Please follow the instruction in the readme file
 - __identify_redundant_workspaces__ - create a list of Workspace candidate for deletion (base on no project and as a duplicate workspace name)
 - __delete_redundant_workspaces__ - remove workspace specified in input file
 
+For the above command options, the structure of data inthe input (and output) file is as follow:
+```
+[
+    {
+        name:string, // Workspace name
+        guid: string, // workspace GUID
+        id:string, // workspace lagacy id AKA slug
+        projects_count: number // workspace's projects count
+    },
+    ...
+]
+```
+
 ### SAST (Static Application Security Testing)
 - __TBC__....
 
