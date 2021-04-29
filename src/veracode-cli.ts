@@ -2,6 +2,7 @@
 import yargs = require('yargs/yargs');
 
 const argv = yargs(process.argv.slice(2))
+    .scriptName('veracode-cli')
     .commandDir('veracode/cmd')
     .showHelpOnFail(true)
     .demandCommand(1,'')

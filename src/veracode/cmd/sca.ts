@@ -12,5 +12,4 @@ export interface outputWS  {
   guid: string;
   id:string;
   projects_count: number;
-
-};
+}

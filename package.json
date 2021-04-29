@@ -1,6 +1,6 @@
 {
   "name": "@ylveracode/veracode-cli",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "a NodeJS based API wrapper for utilizing the Veracode APIs",
   "homepage": "https://lerer.github.io/veracode-cli/",
   "repository": {
@@ -14,7 +14,8 @@
     "veracode-cli": "out/veracode-cli.js"
   },
   "scripts": {
-    "test-workspaces": "node ./out/test/testAPI.js",
+    "test-sca-workspaces": "node ./out/test/testSCAWorkspacesAPI.js",
+    "test-static-builds": "node ./out/test/testApplicationsLatestBuild.js",
     "clean": "del-cli ./out/*",
     "build": "npm run clean && tsc",
     "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
@@ -35,8 +36,8 @@
     "yargs": "^16.2.0"
   },
   "devDependencies": {
-    "@types/node": "^14.14.22",
-    "@types/prompts": "^2.0.9",
+    "@types/node": "^15.0.1",
+    "@types/prompts": "^2.4.0",
     "@types/yargs": "^16.0.0",
     "del-cli": "^3.0.1"
   },

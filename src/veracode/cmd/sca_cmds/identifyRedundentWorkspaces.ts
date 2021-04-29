@@ -21,7 +21,7 @@ exports.builder = (yargs:any) => {
   }
 
 exports.handler =  async (argv:any) => {
-    const input = await fs.readFileSync(argv.inputfile,{encoding:'utf-8'});
+    const input = fs.readFileSync(argv.inputfile,{encoding:'utf-8'});
     const jsonInput = JSON.parse(input);
     // to keep referance to a workspaces we want to keep with instead of no duplicate of a workspace with zero 
     const allZero:any = {};

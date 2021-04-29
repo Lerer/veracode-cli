@@ -1,5 +1,5 @@
 
-import {getWorkspaces} from '../../apis/workspaces';
+import {getWorkspaces} from '../../apis/sca/workspaces';
 import fs from 'fs';
 import {outputWS} from '../sca';
 
@@ -50,7 +50,7 @@ exports.handler = async function (argv:any) {
   fs.writeFileSync(argv.filename,JSON.stringify(overallResults,null,4),{encoding:'utf-8'});
 
   if (argv.verbose) {
-    overallResults.map((ws:outputWS) => {
+    overallResults.forEach((ws:outputWS) => {
       console.log('Workspace: [%s], site: [%s] has [%d] projects',ws.name,ws.id,ws.projects_count);
     })
   }

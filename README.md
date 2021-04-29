@@ -6,11 +6,11 @@ Please follow the instruction in the readme file
 
 ## Existing commands
 ### SCA (Software Composition Analysis)
-- __list_workspaces__ - List the existing workspaces
-- __identify_redundant_workspaces__ - create a list of Workspace candidate for deletion (base on no project and as a duplicate workspace name)
-- __delete_redundant_workspaces__ - remove workspace specified in input file
+- __listWorkspaces__ - List the existing workspaces
+- __identifyRedundantWorkspaces__ - create a list of Workspace candidate for deletion (base on no project and as a duplicate workspace name)
+- __deleteWorkspaces__ - remove workspace specified in input file
 
-For the above command options, the structure of data inthe input (and output) file is as follow:
+For the above SCA Workspace related command options, the structure of data in the input (and/or output) file is as follow:
 ```
 [
     {
@@ -24,7 +24,9 @@ For the above command options, the structure of data inthe input (and output) fi
 ```
 
 ### SAST (Static Application Security Testing)
-- __TBC__....
+- __listApplications__ - List (or search) applications by either their partial name, lagacy ID or GUID
+- __TBC - Find applications with active policy scan which is not completed for X amount of hours__
+- __TBC - delete last policy scan based on application GUID__
 
 ## Installation
 
@@ -37,4 +39,4 @@ simply type `veracode-cli --help` in your shell and follow the available options
     
           
 
-Please post request as an issue in the code repository
+### Please post request/s for additional commands options as an issue in the code repository

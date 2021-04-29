@@ -10,6 +10,7 @@ const PROTOCOL = 'https://';
 const DEFAULT_METHOD = 'GET';
 type METHOD = 'GET'|'POST'|'DELETE';
 export const DEFAULT_API_HOST = 'api.veracode.com';
+export const DEFAULT_XML_API_HOST = 'analysiscenter.veracode.com';
 export const guidRegEx:RegExp = /[a-z\d]{8}-[a-z\d]{4}-[a-z\d]{4}-[a-z\d]{4}-[a-z\d]{12}/i;
 
 export async function request(inputMethod:METHOD,host:string,path:string, params:object) {
@@ -41,7 +42,7 @@ export async function request(inputMethod:METHOD,host:string,path:string, params
     return axios.request({
         method,
         headers:{
-            'Accept': 'application/json',
+            //'Accept': 'application/json',
             'User-Agent': USER_AGENT,
             'Authorization': authHeader,
             "Accept-encoding": "utf8"
