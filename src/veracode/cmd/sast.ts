@@ -6,4 +6,3 @@ exports.builder = function (yargs:any) {
     .commandDir('sast_cmds');
 }
 exports.handler = function (argv:string[]) {}
-

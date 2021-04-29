@@ -1,18 +1,19 @@
 import {request,DEFAULT_XML_API_HOST} from '../queryHandler';
+import xml2js from 'xml2js';
 
 const DEFAULT_PAGE_SIZE = 500;
 
-export async function getBuildInfo(appId:number,sandboxId: number|undefined,buildId: number|undefined) : Promise<any | undefined> {
+export async function getBuildInfo(appId:number,sandboxId?: number|undefined,buildId?: number|undefined) : Promise<any | undefined> {
     //console.log('getWorkspaces - START');
-    let buildInfo = '';
+    let jsonBuildInfo = {};
 
     let params:any = {app_id:appId};
-    if (sandboxId) {
-        console.log('adding sandbox id: ',sandboxId);
-        params.sandbox_id = sandboxId;
-    } else {
-        console.log(sandboxId);
-    }
+    // if (sandboxId) {
+    //     console.log('adding sandbox id: ',sandboxId);
+    //     params.sandbox_id = sandboxId;
+    // } else {
+    //     console.log(sandboxId);
+    // }
     if (buildId) {
         params.build_id = buildId;
     }
@@ -24,7 +25,10 @@ export async function getBuildInfo(appId:number,sandboxId: number|undefined,buil
             '/api/5.0/getbuildinfo.do',
             params);
         //console.log(JSON.stringify(workspacesRes.data));
-        buildInfo = buildInfoRes.data;
+        const buildInfo = buildInfoRes.data;
+        xml2js.parseString(buildInfo,{explicitArray:false,trim:true},(err,result)=> {
+            jsonBuildInfo = result.buildinfo.build;
+        });
     } catch (e) {
         console.log(e);
         console.log(Object.keys(e));
@@ -34,5 +38,5 @@ export async function getBuildInfo(appId:number,sandboxId: number|undefined,buil
         console.log(e.isAxiosError);
         console.log(e.toJSON());
     }
-    return buildInfo;
+    return jsonBuildInfo;
 }

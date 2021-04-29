@@ -30,9 +30,11 @@
   "author": "Yaakov Lerer",
   "license": "ISC",
   "dependencies": {
+    "@types/xml2js": "^0.4.8",
     "axios": "^0.21.1",
     "configparser": "^0.3.8",
     "prompts": "^2.4.0",
+    "xml2js": "^0.4.23",
     "yargs": "^16.2.0"
   },
   "devDependencies": {

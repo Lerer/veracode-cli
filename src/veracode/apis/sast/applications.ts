@@ -1,11 +1,10 @@
 import {request,DEFAULT_API_HOST} from '../queryHandler';
 
 export async function getApplications(appName?: string|undefined,appGUID?:string|undefined,lagacyAppId?:number|undefined) : Promise<any | undefined> {
-    console.log('getApplications - START');
     let applications = '';
 
     let path = '/appsec/v1/applications';
-    let params:any = {};
+    let params:any = {size:500};
 
     if (appGUID) {
         path = path+'/'+appGUID;
@@ -35,6 +34,6 @@ export async function getApplications(appName?: string|undefined,appGUID?:string
         console.log(e.isAxiosError);
         console.log(e.toJSON());
     }
-    console.log('getApplications - END');
+
     return applications;
 }

@@ -107,3 +107,7 @@ dist
 
 # local import
 package-lock.json
+
+# files for testing purpose
+apps.json
+
